@@ -21,7 +21,7 @@
         <li><a href="#Testar-a-Webapp">Testar a Webapp</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ol>
 </details>
 
@@ -137,3 +137,42 @@ Passemos agora à descrição da instalação. Esta secção incluirá a instala
 19. Por último, só falta copiar os ficheiros do clone do nosso projeto para dentro da sua nova Angular webapp que foi gerada, mas para tal tem que ter conhecimento de como devem ser colados, de forma a substituir na totalidade os ficheiros orignais criados peloa Angular CLI. A arquitetura final após substituição dos ficheiros deve ser a seguinte:
 
 ![Image description](https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS/blob/main/ReadFile_Screenshot/arquitetura.png)
+
+20. Existiram mais alguns que packages que foram instalados e não foram utilizados, pode estar em flata nesta lista, mas se for o caso será avisado para a sua instalação pelo seu terminal.
+21. Importante referir que logicamente terá que importar o ficheiro .SQL guardado na diretoria Base de Dados deste repositório, para o seu SQL Server de escolha. Como referido anteriormente certifique-se que altera a password do mesmo no ficheiro .env;
+
+### Testar a Webapp
+
+Está agora apto a testar a nossa webapp. A nossa web app foi criada com o intuito de ser uma webapp minimalista (UI/UX trending), mas que implementasse maioria dos requisitos a que nos propusemos. A aplicação é intuitiva, e nos casos em que pode não ser tão clara foram ainda usadas tool-tips. A nossa WebApp tem 3 users genéricos (Admin, RH, e CFO), o natural processo de utlização da nossa Webapp é:
+* Login com Admin (admin@mail.com - User.1234 (esta password é a genérica para todos os utlizadores);
+* Criar disciplinas com Admin para que Explicadores se possam registar nas mesmas;
+* Login com os RH ( rh@mail.com - User.1234);
+* Gerar nova Token de registo para o novo explicador contratado se poder registar na webapp, caso contrário qualquer pessoa não contratada ou sem habilitações poderia realizar o registo;
+* Registar Explicador usando a Token de Registo Gerada;
+* Login com o Explicador e criação de conteúdos de disciplina, link, e disponibilidades;
+* Registo de novo encarregado e posteriormente do seu educando;
+* Login com o educando, inscrição em disciplina, consumo de conteúdos das disciplinas e criação de feedbacks;
+* O Explicador pode agora visualizar os feedbacks criados, e com os RH pode visualizar os seus explicadores, visualizar feedbacks, visualizar avaliações de explicadores ou criar novas avaliações, e no pior dos casos eliminar explicadores com prestações pobres (despedimento);
+* Ao fazer Login com o Encarregado de educação pode visualizar os dados dos seus educandos e os seus progressos, visualizar valores em dívida, mudar o método de pagamento e por último pode pagar propinas. É interessante realizar um pagamento em caso de testes para visualizar o passo seguinte;
+* Após haverem pagamentos de explicações realizados por parte de encarregados, o CFO pode realizar o Login (cfo@mail.com - User.1234) e visualizar todas as faturas criadas até à data.
+
+<b>Nota:</b> Sendo que as password hashes foram criadas noutra máquina, podem não funcionar quando forem validadas no seu computador. Se for esse o caso, em princípo basta criar um novo registo, e o bcrypt automaticamente deve conseguir desencriptar as restantes passwords, pois o hash e salt serão os mesmos.
+
+Posto isto, para inicializar a aplicação deve:
+* Ligar o SQL Server;
+* No terminal da sua aplicação, dentro da diretoria Explica-Online, arranque com a API:
+   ```sh
+   npm run start:server 
+   ```
+* Deverá ser avisado do sucesso da inicialização;
+* A Rest API está agora disponível em http://localhost:3000/, caso a queira testar via Postman;
+* Abra um novo terminal;
+* CD para a diretoria Explica-Online, inicialize agora o Development Server do Angular:
+   ```sh
+   ng serve 
+   ```
+* Finalmente pode aceder a webapp em: http://localhost:4200/;
+
+## Contacto
+
+Posto isto, as instruções de inicialização da nossa webapp estão terminadas. Caso encontre alguma dificuldade por favor contactar via: henriquesantos293@gmail.com
