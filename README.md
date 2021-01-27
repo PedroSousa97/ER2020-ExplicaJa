@@ -136,3 +136,4 @@ Passemos agora à descrição da instalação. Esta secção incluirá a instala
    ```
 19. Por último, só falta copiar os ficheiros do clone do nosso projeto para dentro da sua nova Angular webapp que foi gerada, mas para tal tem que ter conhecimento de como devem ser colados, de forma a substituir na totalidade os ficheiros orignais criados peloa Angular CLI. A arquitetura final após substituição dos ficheiros deve ser a seguinte:
 
+![Image description](https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS/blob/main/ReadFile_Screenshot/arquitetura.png)
