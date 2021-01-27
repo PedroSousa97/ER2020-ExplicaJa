@@ -1,0 +1,76 @@
+<div class="jumbotron">
+  <button mat-icon-button matTooltip="Voltar à página anterior" color="warn" aria-label="inscreve" (click)="backClicked()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <div class="narrow disc text-center" >
+      <div class="col-12">
+          <h2 class="heading">{{nomeDisciplina}} {{anoDisciplina}}º</h2>
+          <div class="heading-underline"></div>
+      </div>
+  </div>
+  <div class="row text-center">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header (click)="getLinkeCont()">
+          <mat-panel-title>
+            Link da Disciplina
+          </mat-panel-title>
+          <mat-panel-description>
+            Clique para expandir e visualizar
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p *ngIf="linkvazio">Não existem Links de aula criados</p>
+        <p *ngIf="!linkvazio" class="text-left">{{this.link}} <button mat-icon-button matTooltip="Adicionar Aula ao Progresso" class="adicionadiscip" color="primary" aria-label="inscreve" (click)="adicionarAula()">
+          <mat-icon>add</mat-icon>
+        </button></p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div> <!--fim das colunas-->
+
+  <div class="row text-center">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header (click)="getLinkeCont()">
+          <mat-panel-title>
+            Conteúdos
+          </mat-panel-title>
+          <mat-panel-description>
+            Clique para expandir e visualizar
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p *ngIf="conteudos.length==0">Disciplina não contém conteúdos</p>
+        <div *ngFor="let conteudo of conteudos">
+          <h3 class="text-left" >{{conteudo['Título']}}</h3>
+          <p class="text-left">{{conteudo['Description']}}</p>
+        </div>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div> <!--fim das colunas-->
+
+  <div class="row text-center">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header (click)="getDisponibilidades()">
+          <mat-panel-title>
+            Disponibilidades
+          </mat-panel-title>
+          <mat-panel-description>
+            Clique para expandir e visualizar
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p *ngIf="disponibilidades.length==0">Sem disponibilidades</p>
+        <div *ngFor="let disponibilidade of disponibilidades">
+          <p class="text-left">ID: {{disponibilidade['Explicador_Pessoa_idPessoa']}} - {{disponibilidade['Nome']}} {{disponibilidade['Sobrenome']}} - Horário: {{disponibilidade['Dates']}}</p>
+        </div>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div> <!--fim das colunas-->
+
+
+</div>
+<!--Fim Jumbotron bootstrap-->

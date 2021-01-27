@@ -1,0 +1,99 @@
+<div class="jumbotron">
+  <div class="narrow text-center" >
+      <div class="col-12">
+          <h2 class="heading">{{User.Nome}} {{User.Sobrenome}}</h2>
+          <div class="heading-underline"></div>
+      </div>
+  </div>
+      <div class="row text-center">
+        <mat-tab-group color="warn" mat-stretch-tabs class="rh_tab">
+          <mat-tab label="Todas as Disciplinas">
+            <div class="row text-center">
+              <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Disciplinas disponíveis para inscrição
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Clique para expandir e visualizar
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p *ngIf="disciplinas.length==0">Não existem ainda disciplinas para o seu ano de escolaridade. Contacte-nos!</p>
+                  <div class="availablediscip" *ngFor="let disciplina of disciplinas">
+                    <h3 class="text-left distitulo" >ID: {{disciplina['idDisciplinas']}} - {{disciplina['Nome']}}</h3>
+                    <button mat-icon-button matTooltip="Inscrever-se nesta disciplina" class="adicionadiscip" color="warn" aria-label="inscreve" (click)="subscreveDisciplina(disciplina['idDisciplinas'])">
+                      <mat-icon>add</mat-icon>
+                    </button>
+                  </div>
+
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div> <!--fim das colunas-->
+          </mat-tab>
+          <mat-tab label="As Minhas Disciplinas">
+            <div class="row text-center">
+              <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Aceder às suas Disciplinas
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Clique para expandir e visualizar
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p *ngIf="minhasDisciplinas.length==0">Ainda não está inscrito em nehuma disciplina</p>
+                  <div class="availablediscip" *ngFor="let disciplina of minhasDisciplinas">
+                    <h3 class="text-left distitulo" >ID: {{disciplina['idDisciplinas']}} - {{disciplina['Nome']}} {{disciplina['Ano']}}</h3>
+                    <button mat-icon-button matTooltip="Aceder a Disciplina" class="adicionadiscip" color="primary" aria-label="inscreve" (click)="visualizarDisciplina(disciplina['idDisciplinas'],disciplina['Nome'],disciplina['Ano'])">
+                      <mat-icon>forward</mat-icon>
+                    </button>
+                  </div>
+
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div> <!--fim das colunas-->
+          </mat-tab>
+          <mat-tab label="Criar Feedback">
+            <div class="row text-center">
+              <mat-card class="box">
+                <mat-card-header class="formhead">
+                  <mat-card-title>Submeter Feedback</mat-card-title>
+                </mat-card-header>
+
+                <form (submit)="criarFeedback(feedbackForm)" #feedbackForm="ngForm" class="example-form">
+                  <mat-card-content>
+
+                    <mat-form-field color="warn" class="example-full-width">
+                      <mat-label>Explicador</mat-label>
+                      <select matNativeControl name="idExplicador" ngModel #idExplicador="ngModel" required>
+                        <option hidden selected>Selecione um Explicador</option>
+                        <option *ngFor="let explicador of explicadores" value={{explicador.idPessoa}}>{{explicador['Nome']}} {{explicador['Sobrenome']}}</option>
+                      </select>
+                      <mat-error *ngIf="idExplicador.invalid">Por favor selecione uma disciplina.</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field color="warn" class="example-full-width">
+                      <textarea matInput type="text" name="fedback" ngModel #feedback="ngModel" required placeholder="Feedback"></textarea>
+                      <mat-error *ngIf="feedback.invalid">Por favor introduza o Conteúdo.</mat-error>
+                    </mat-form-field>
+
+                  </mat-card-content>
+                  <button mat-raised-button color="warn" class="btn-block">Criar</button>
+                </form>
+              </mat-card>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div> <!--fim das colunas-->
+
+      <div class="row text-center">
+
+      </div> <!--fim das colunas-->
+
+
+</div>
+<!--Fim Jumbotron bootstrap-->
