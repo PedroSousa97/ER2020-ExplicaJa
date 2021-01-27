@@ -4,6 +4,8 @@
     <h3 align="center">Descrição Geral do Projeto e Instruções de Instalação</h3>
 </p>
 
+![Image description](https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS/blob/main/ReadFile_Screenshot/screenshot.PNG)
+
 <details open="open">
   <summary>Tabela de Conteúdos</summary>
   <ol>
