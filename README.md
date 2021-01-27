@@ -89,7 +89,7 @@ Passemos agora à descrição da instalação. Esta secção incluirá a instala
 4. Abra a nova pasta, por enquanto vazia, no seu editor de texto;
 5. Abra o terminal do seu editor de texto;
 6. Execute o seguinte comando para criar uma nova Angular webapp genérica:
-    ```sh
+   ```sh
    ng new Explica-Online
    ```
 7. Instalação default com rounting-modules (caso pergunte por esta opção);
