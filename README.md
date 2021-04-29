@@ -70,7 +70,7 @@ My webapp uses MariaDB as a database, AngularJS as UI / UX Framework and NodeJS 
             <li>Angular Snippets (Version 11)</li>
         </ul>
     </li>
-    <li><a href="https://nodejs.org/en/"> NodeJS /a> installed in your environment is a mandatory requirement. It is with the same that the Angular CLI will be installed, as well as the creation of the initial project, and installation of facilities, such as the UI - Angular Material bookstore. In addition, NodeJS is used for the creation of our Back-end (Rest API), so it will also be necessary for that purpose and to install the necessary packages for its functioning, namely the Express - NodeJS framework. </li>
+    <li><a href="https://nodejs.org/en/"> NodeJS </a> installed in your environment is a mandatory requirement. It is with the same that the Angular CLI will be installed, as well as the creation of the initial project, and installation of facilities, such as the UI - Angular Material bookstore. In addition, NodeJS is used for the creation of our Back-end (Rest API), so it will also be necessary for that purpose and to install the necessary packages for its functioning, namely the Express - NodeJS framework. </li>
 </ul>
 
 ### Installation
