@@ -1,0 +1,153 @@
+<div class="admin">
+  <div class="jumbotron">
+    <div class="narrow text-center" >
+        <div class="col-12">
+            <h2 class="heading">Admin Dashboard</h2>
+            <div class="heading-underline"></div>
+        </div>
+    </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+              <mat-card class="box explicadores">
+                <mat-card-header>
+                  <mat-card-title>Total Explicadores: {{totalExplicadores}}</mat-card-title>
+                </mat-card-header>
+
+                  <mat-card-content>
+                  </mat-card-content>
+              </mat-card>
+            </div>
+            <div class="col-md-4">
+              <mat-card class="box explicandos">
+                <mat-card-header>
+                  <mat-card-title>Total Explicandos: {{totalExplicandos}}</mat-card-title>
+                </mat-card-header>
+
+                  <mat-card-content>
+
+                  </mat-card-content>
+              </mat-card>
+            </div>
+            <div class="col-md-4">
+              <mat-card class="box disciplinas">
+                <mat-card-header>
+                  <mat-card-title>Total Disciplinas: {{totalDisciplinas}}</mat-card-title>
+                </mat-card-header>
+
+                  <mat-card-content>
+
+                  </mat-card-content>
+              </mat-card>
+            </div>
+
+        </div> <!--fim das colunas-->
+
+        <div class="row text-center">
+          <div class="col-md-4">
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Disciplinas
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Clique para expandir e visualizar
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p *ngIf="disciplinas.length==0">Não existem disciplinas</p>
+                <p class="text-left" *ngFor="let disciplina of disciplinas">ID: {{disciplina['idDisciplinas']}} - {{disciplina['Nome']}} {{disciplina['Ano']}}º</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+
+            <div class="col-md-4">
+              <mat-card class="box">
+                <mat-card-header class="formhead">
+                  <mat-card-title>Criar Disciplina</mat-card-title>
+                </mat-card-header>
+
+                <form (submit)="criaDisciplina(disciplinaForm)" #disciplinaForm="ngForm" class="example-form">
+                  <mat-card-content>
+                    <mat-form-field color="warn" class="example-full-width">
+                      <input matInput type="text" name="nomedisciplina" ngModel #nomeDisciplina="ngModel" required placeholder="Disciplina">
+                      <mat-error *ngIf="nomeDisciplina.invalid">Por favor introduza uma disciplina.</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field color="warn" class="example-full-width">
+                      <mat-label>Ano a Lecionar</mat-label>
+                      <select matNativeControl name="anoLecionar" ngModel #anoLecionar="ngModel" required>
+                        <option value="5">5º</option>
+                        <option value="6">6º</option>
+                        <option value="7">7º</option>
+                        <option value="8">8º</option>
+                        <option value="9">9º</option>
+                        <option value="10">10º</option>
+                        <option value="11">11º</option>
+                        <option value="12">12º</option>
+                      </select>
+                      <mat-error *ngIf="anoLecionar.invalid">Por favor selecione o ano a lecionar.</mat-error>
+                    </mat-form-field>
+                  </mat-card-content>
+                  <button mat-raised-button color="warn" class="btn-block">Criar</button>
+                </form>
+              </mat-card>
+            </div>
+            <div class="col-md-4">
+              <mat-card class="box">
+                <mat-card-header class="formhead">
+                  <mat-card-title>Apagar Disciplina</mat-card-title>
+                </mat-card-header>
+
+                <form (submit)="apagaDisciplina(disciplinaDelForm)" #disciplinaDelForm="ngForm" class="example-form apagar">
+                  <mat-card-content>
+                    <mat-form-field color="warn" class="example-full-width">
+                      <input matInput type="number" name="iddisciplina" ngModel #idDisciplina="ngModel" required placeholder="ID da Disciplina">
+                      <mat-error *ngIf="idDisciplina.invalid">Por favor introduza o ID da Disciplina.</mat-error>
+                    </mat-form-field>
+                  </mat-card-content>
+                  <button mat-raised-button color="warn" class="btn-block">Apagar</button>
+                  <p class="apagainfo">Visualize o ID no dropdown das Disciplinas</p>
+                </form>
+              </mat-card>
+            </div>
+        </div> <!--fim das colunas-->
+        <div class="row text-center">
+          <div class="col-md-4">
+          </div>
+            <div class="col-md-4">
+              <mat-card class="box">
+                <mat-card-header class="formhead">
+                  <mat-card-title>Atualizar Preçário</mat-card-title>
+                </mat-card-header>
+
+                <form (submit)="atualizaPrecario(precarioForm)" #precarioForm="ngForm" class="example-form">
+                  <mat-card-content>
+                    <mat-form-field color="warn" class="example-full-width">
+                      <input matInput type="number" name="aulapreco" ngModel #aulaPreco="ngModel" required placeholder="Aula">
+                      <mat-error *ngIf="aulaPreco.invalid">Por favor introduza uma disciplina.</mat-error>
+                    </mat-form-field>
+                    <mat-form-field color="warn" class="example-full-width">
+                      <input matInput type="number" name="Mensalpreco" ngModel #anualPreco="ngModel" required placeholder="Mensal">
+                      <mat-error *ngIf="anualPreco.invalid">Por favor introduza uma disciplina.</mat-error>
+                    </mat-form-field>
+                    <mat-form-field color="warn" class="example-full-width">
+                      <input matInput type="number" name="Anualpreco" ngModel #mensalPreco="ngModel" required placeholder="Anual">
+                      <mat-error *ngIf="mensalPreco.invalid">Por favor introduza uma disciplina.</mat-error>
+                    </mat-form-field>
+
+
+                  </mat-card-content>
+                  <button mat-raised-button color="warn" class="btn-block">Atualizar</button>
+                </form>
+              </mat-card>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div> <!--fim das colunas-->
+
+
+</div>
+<!--Fim Jumbotron bootstrap-->
+</div>
+

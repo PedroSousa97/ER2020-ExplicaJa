@@ -1,0 +1,14 @@
+<mat-nav-list class="sidenav-color">
+    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+        <mat-icon class="iconsnav">home</mat-icon> <span class="nav-caption">Home</span>
+    </a>
+    <a *ngIf="!this.authService.islogged && !this.isStillLogged" mat-list-item routerLink="/register" (click)="onSidenavClose()">
+        <mat-icon class="iconsnav">how_to_reg</mat-icon> <span class="nav-caption">Registo</span>
+    </a>
+    <a *ngIf="!this.authService.islogged && !this.isStillLogged" mat-list-item routerLink="/login" (click)="onSidenavClose()">
+        <mat-icon class="iconsnav">login</mat-icon><span class="nav-caption">Login</span>
+    </a>
+    <a *ngIf="this.authService.islogged || this.isStillLogged" mat-list-item routerLink="/" (click)="onSidenavClose();logout()">
+      <mat-icon class="iconsnav">logout</mat-icon><span class="nav-caption">Logout</span>
+  </a>
+</mat-nav-list>
