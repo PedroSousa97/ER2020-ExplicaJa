@@ -81,10 +81,7 @@ Now let's move on to the description of the installation. Do the following steps
    ```sh
    git clone https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS.git
    ```
-2. cd to the project folder:
-   ```sh
-   npm install -g @angular/cli
-   ```
+2. cd to the project folder;
 3. And then install the packages and dependencies:
    ```sh
    npm install
@@ -117,7 +114,7 @@ That said, to initialize the application you must:
 * You should be notified of the success of the initialization;
 * The Rest API is now available at http://localhost:3000/, if you want to test it via Postman;
 * Open a new terminal;
-* CD to the Explica-Online directory, start Angular's Development Server now:
+* CD to the project directory, start Angular's Development Server now:
    ```sh
    ng serve 
    ```
