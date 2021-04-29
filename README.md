@@ -1,180 +1,128 @@
-# ER2020-ExplicaJa-Grupo 8
+# ER2020-ExplicaJa
 
 <p align="center">
-    <h3 align="center">Descrição Geral do Projeto e Instruções de Instalação</h3>
+    <h3 align="center">Project Overview</h3>
 </p>
 
-![Image description](https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS/blob/main/ReadFile_Screenshot/screenshot.PNG)
+![Image description](https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS/blob/main/ReadFile_Img/screenshot.PNG)
 
 <details open="open">
-  <summary>Tabela de Conteúdos</summary>
+  <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#Âmbito-do-Projeto">Âmbito do Projeto</a>
+      <a href="#Project-Scope">Project Scope</a>
     </li>
      <li>
-      <a href="#Visão-Geral-do-Projeto">Visão Geral do Projeto</a>
+      <a href="#Project-Overview">Project Overview</a>
     </li>
     <li>
       <a href="#Get-Started">Get Started</a>
       <ul>
-        <li><a href="#Prerequisitos">Prerequisitos</a></li>
-        <li><a href="#Instalação">Instalação</a></li>
-        <li><a href="#Testar-a-Webapp">Testar a Webapp</a></li>
+        <li><a href="#Prerequisites">Prerequisites</a></li>
+        <li><a href="#Installation">Installation</a></li>
+        <li><a href="#Testing-the-Web-App">Testing the Web App</a></li>
       </ul>
     </li>
-    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#Contact">Contact</a></li>
   </ol>
 </details>
 
-## Âmbito do Projeto
+## Project Scope
 
-Este projeto tem como principal objetivo servir de modelo a um Sistema de Gestão de Explicações Online, por meio de uma empresa fictícia de nome “ExplicaJa”. Para isso, esta dita empresa “contratou-nos” para desenvolver e implementar tal sistema de gestão.
+This project has as main goal to serve as a model for an Online Tutoring Management System, through a fictitious company named “ExplicaJa”. It was developed for the Requirement Engineering Discipline of University of Madeira, Computer Engineering Course
 
-Contextualizando a empresa “ExplicaJa”, é uma empresa que tinha por objetivo, num período pré-pandémico, fornecer serviços de explicação / tutoria, de forma presencial, de disciplinas lecionadas entre o 5o ano escolar e o 12o ano escolar (desde o ensino básico ao ensino secundário). Dada as circunstâncias epidemiológicas atuais, a empresa foi forçada a se reinventar, ou seja, a redefinir a sua área de atuação de modo a respeitar as regras de distanciamento social e a assegurar a sua subsistência económica. Por conseguinte, a empresa optou por se “modernizar” e passar a fornecer os seus serviços da forma mais segura possível, ou seja, de forma online.
+Contextualizing the company “ExplicaJa”, it is a company that aimed, in a pre-pandemic period, to provide tutoring services, in person, of students from elementary and high school. Given the current epidemiological circumstances, the company was forced to reinvent itself, that is, to redefine its area of operation in order to respect the rules of social distance and to ensure its economic subsistence. Therefore, the company chose to “modernize” and start providing its services in the most secure way possible, that is, online.
 
-Posto isto, a empresa decidiu encomendar o desenho de um sistema que permitisse, de forma fácil, intuitiva e segura, gerir as suas explicações e o seu leque de docentes.
+Initially, it would only be supposed to create an interactive prototype that implements the main functional requirements of the webapp to be developed. However, enthusiasm took over me, and I ended up creating a fully functional prototype, that is, a full-stack web-app that aims to implement in a simplified way the features to be integrated in the final project.
 
-Assim, conclui-se que o objetivo, pelo menos atual, da empresa “ExplicaJa” é garantir que os seus clientes, apesar das circunstâncias adversas, continuem a poder usufruir dos seus serviços. Com a passagem dos seus serviços para o modo online, a possibilidade de angariar potenciais novos clientes (não-residentes na área de atuação da empresa) é também um objetivo, porventura secundário, da empresa em questão.
+## Project Overview
 
-## Visão Geral do Projeto
-
-De uma forma mais detalhada, a empresa, com este projeto, pretende obter uma aplicação de gestão do seu sistema de explicações. Esta aplicação tem de permitir, obrigatoriamente, inúmeros serviços de gestão.
-De entre os serviços, detalha-se, de uma forma geral:
-* Gerir as explicações.
-* Gerir os explicadores (listas e atribuição, consoante disponibilidade).
-* Gerir as marcações/realizações das tutorias.
-* Gerir os pagamentos (por exemplo das mensalidades, anualidades).
-* Gerir e organizar os diferentes planos de acesso (consoante o plano de pagamento).
-* Permitir que cada aluno possa avaliar a qualidade das suas explicações.
-* Permitir que o explicador tenha acesso à informação supracitada.
-* Permitir que cada explicador organize o seu horário, aceda a recursos (por exemplo exercícios extra) e ao seu progresso individual enquanto explicador.
-* Permitir um acompanhamento por parte dos encarregados de educação (aceder ao progresso dos respetivos alunos, por exemplo).
-* Permitir, através de diversos feedbacks, avaliar os explicadores e o serviço de explicação (no final de cada ano letivo, por exemplo).
-* Permitir o registo de clientes / profissionais.
+In more detail, the company with this project intends to obtain an application for the management of its tutoring system. This application must allow innumerable management services.
+Among the services, in general, it should:
+* Manage explanations.
+* Manage teachers (lists and assignment, depending on availability).
+* Manage the schedules / achievements of the tutors.
+* Manage payments (for example, monthly fees, annual fees).
+* Manage and organize the different access plans (depending on the payment plan).
+* Allow each student to evaluate the quality of their classes.
+* Allow the instructor to have access to the above information.
+* Allow each tutor to organize their schedule, access resources (for example extra exercises) and their individual progress as a tutor.
+* Allow monitoring by parents / guardians (access the progress of their students, for example).
+* Allow, through various feedbacks, to evaluate the explainers and the explanation service (at the end of each school year, for example).
+* Allow the registration of clients / professionals.
 
 ## Get Started
 
-Sendo uma full-stack web application, o nosso projeto envolveu variadas tecnologias, middlewares e packages. Esta seccção descreve os passos a seguir para conseguir clonar a nossa webapp e efetivamente compilar, executar e testar a mesma. Sendo que os pacotes instalados foram de uma ordem de quantidade razoável. 
+Being a full-stack web application, this project involved various technologies, middleware and packages. This section gives a brief description of the technologies used in its development, list of prerequisites that you need to have installed in order to test this application with the exact same environment that was used in development and a brief instruction on how to run it.
 
-É natural que este README tenha em falta alguns dos pacotes a serem instalados via npm ou ng, mas caso isso aconteça, será avisado através do terminal do seu editor de texto de que essas dependências estam em falta.
+<b>Note:</b> This project was completed in a period of around one week, having that in mind, some of the back-end security essentials were not implemented due to the time I had available to finish it. With that said, although password encryption is present, the web application is lacking the AuthGuard and JWT Interceptor, required to protect the different routes and API requests, having into account the user authentication and role. I did implement the JWT creation upon user login and return it from the Rest API, so the referred security guidelines are easily implemented using the existing code.
 
-### Prerequisitos
+### Prerequisites
 
-A nossa webapp utiliza MariaDB como base de dados, AngularJS como UI/UX Framework e NodeJS+Express para o Back-end. Começaremos então pelos prerequisitos: 
+My webapp uses MariaDB as a database, AngularJS as UI / UX Framework and NodeJS + Express for the Back-end. We will start with the prerequisites:
 
 <ul>
-    <li>Para conseguir ter exatamente o mesmo ambiente de desenvolvimento aconselhamos a instalação de software <a href="https://www.heidisql.com/download.php">HeidiSQL</a>, sendo que este servirá de SQL Server e software de visualização e gestão da sua Base de Dados. Este software é de fonte segura e intuitivo, no entanto é opcional pois existem outras boas opções para o mesmo efeito;</li>
-    <li>A nível de editor de texto, embora também opcional, foi utilizado o <a href="https://code.visualstudio.com/">VSCode</a>, editor atualmente mais usado a nível mundial e com extensões que permite um wrokflow muito mais eficiente para qualquer programador. Este ponto talvez seria escusado pois calculo que já o deve ter instalado, no entanto aconselhamos as seguintes extensões:
+    <li>To be able to have exactly the same development environment, I recommend installing a href="https://www.heidisql.com/download.php"> HeidiSQL /a>, which will serve as SQL Server and software of visualization and management of your database. This software is intuitive and from a safe source, however it is optional as there are other good options for the same purpose;</li>
+    <li>For the Text Editor, although also optional, I used the a href="https://code.visualstudio.com/"> VSCode /a> current most popular worldwide and with extensions that allows a workflow much more efficient for any programmer. This point would perhaps be excused as I calculate that you must have already installed it, however I recommend the following extensions:
         <ul>
             <li>Angular Essentials (Version 11)</li>
             <li>Angular Language Service</li>
             <li>Angular Snippets (Version 11)</li>
         </ul>
     </li>
-    <li><a href="https://nodejs.org/en/">NodeJS</a> instalado no seu ambiente é um requisito obrigatório. É com o mesmo que irá ser instalado o Angular CLI, bem como a criação do projeto inicial, e algumas ferramentas angular, como por exemplo a livraria de UI - Angular Material. Além disso o NodeJS é utilizado para a criação do nosso Back-end (Rest API), portanto será também necessário para esse efeito e para instalar os packages necessários ao seu funcionameno, nomeadamente a Express - NodeJS framework. </li>
+    <li><a href="https://nodejs.org/en/"> NodeJS /a> installed in your environment is a mandatory requirement. It is with the same that the Angular CLI will be installed, as well as the creation of the initial project, and installation of facilities, such as the UI - Angular Material bookstore. In addition, NodeJS is used for the creation of our Back-end (Rest API), so it will also be necessary for that purpose and to install the necessary packages for its functioning, namely the Express - NodeJS framework. </li>
 </ul>
 
-### Instalação
+### Installation
 
-Passemos agora à descrição da instalação. Esta secção incluirá a instalação do Angular CLI, criação de uma Angular Web App genérica, e todos os restantes pacotes.
+Now let's move on to the description of the installation. Do the following steps:
 
-1. Clone este repositório, para posteriormente alterar a arquitetura dos ficheiros aqui incluídos na sua AngularJS webapp:
+1. Clone this repository:
    ```sh
    git clone https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS.git
    ```
-2. Instale a Command Line do AngularJS. Este comando pode ser executado em qualquer diretoria:
+2. cd to the project folder:
    ```sh
    npm install -g @angular/cli
    ```
-3. Após ter instalado o Angular CLI, Crie uma pasta com o nome que desejar e na localização que desejar igualmente;
-4. Abra a nova pasta, por enquanto vazia, no seu editor de texto;
-5. Abra o terminal do seu editor de texto;
-6. Execute o seguinte comando para criar uma nova Angular webapp genérica:
+3. And then install the packages and dependencies:
    ```sh
-   ng new Explica-Online
+   npm install
    ```
-7. Instalação default com rounting-modules (caso pergunte por esta opção);
-8. Após instalar, vai reparar que foi criada uma nova pasta com toda a arquitetura básica de uma Angular webapp;
-9. No terminal do seu editor de texto execute:
-   ```sh
-   cd Explica-Online
-   ```
-10. Para instalar a UI Library Angular Material execute o comando seguinte. Opção CSS e estilo do tema - Indigo & Pink;
-   ```sh
-   ng add @angular/material
-   ```
-11. Para a responsividade do website em alguns dos componentes instale:
-   ```sh
-   npm install @angular/flex-layout 
-   ```
-12. Express Framework para facilitar a criação de NodeJS API's:
-   ```sh
-   npm install --save express   
-   ```
-13. Para ter um ambiente de desenvolvimento muito mais eficiente foi também instalado o nodemon, que permite reiniciar a API cada vez que os seus ficheiros são guardados:
-   ```sh
-   npm install --save-dev  nodemon  
-   ```
-14. Como foi referido anteriormente, usamos MariaDB como base de dados, então tem que ser também instalado o package referente à mesma:
-   ```sh
-   npm install mariadb
-   ```
-15. Como boa prática temos também um .env file que guarda variáveis que não devem ser enviadas para repositórios git. No nosso caso temos a variável que guarda a password do SQL Server, essa password foi apagada e no .env deste repositório tem uma string que indica o que deve colocar no mesmo, no seu caso a password que escolher para o seu SQL Server. Posto isto, é também necessário uma livraria para tratamneto de .env e suas variáveis:
-   ```sh
-   npm install dotenv --save 
-   ```
-16. Tentamos aproximar o máximo possível a nossa webapp a um caso prático real, sendo assim as passwords dos nossos users são hashed e salted antes de serem armazenadas na nossa base dados. Eis o package necessário para tratar do password hashing - bcrypt:
-   ```sh
-   npm install --save bcrypt
-   ```
-17. Além de password Hashing criamos também as famosas JSON WEB TOKENS quando um utilizador cria um login. Sendo um protótipo, e por falta de tempo, infelizmente não foi possível implementar as Angular Auth Guards e o JWT Interceptor, sendo assim as páginas da nossa webapp estão com routings expostos, bem como a nossa API que nunca recebe a JWT, logo efetivamente é uma API exposta. No entanto, eis o package que utilizamos para gerar as JWT:
-   ```sh
-   npm install --save jsonwebtoken 
-   ```
-18. As datas das faturas são criadas com tempo real, extremamente preciso, e não existe nenhuma magia para tal, foi Moment.js package para tal efeito, ferramenta extremamente eficiente e de fácil utilização:
-   ```sh
-   npm install moment --save
-   ```
-19. Por último, só falta copiar os ficheiros do clone do nosso projeto para dentro da sua nova Angular webapp que foi gerada, mas para tal tem que ter conhecimento de como devem ser colados, de forma a substituir na totalidade os ficheiros orignais criados peloa Angular CLI. A arquitetura final após substituição dos ficheiros deve ser a seguinte:
 
-![Image description](https://github.com/PedroSousa97/ER2020-ExplicaJa-MariaDB-NodeJS-AngularJS/blob/main/ReadFile_Screenshot/arquitetura.png)
 
-20. Existiram mais alguns que packages que foram instalados e não foram utilizados, pode estar em flata nesta lista, mas se for o caso será avisado para a sua instalação pelo seu terminal.
-21. Importante referir que logicamente terá que importar o ficheiro .SQL guardado na diretoria Base de Dados deste repositório, para o seu SQL Server de escolha. Como referido anteriormente certifique-se que altera a password do mesmo no ficheiro .env;
+### Testing the Web App
 
-### Testar a Webapp
+You are now able to test the Web App. The application is intuitive, and in cases where it may not be so clear, tooltips have also been used. The Web App has 3 generic users (Admin, HR, and CFO), the natural process of using our Web App is:
+* Login with Admin (admin@mail.com - User.1234 (this password is the generic one for all users);
+* Create courses with Admin so that Explainers can register with them;
+* Login with HR (rh@mail.com - User.1234);
+* Generate a new registration Token for the new hired accountant to be able to register on the web app, otherwise any non-hired or unqualified person could register;
+* Register Explainer uses the generated Registration Token;
+* Login with the Explainer and creation of course content, link, and availability;
+* Registration of a new supervisor and later of his student;
+* Login with the student, enrollment in the course, consumption of course content and creation of feedbacks;
+* The Explainer can now view the feedbacks created, and with HR he can view his explainers, view feedbacks, view assessors' explanations or create new assessments, and in the worst case, eliminate explainers with poor performance (dismissal);
+* By logging in with the parent / guardian, you can view your students' data and progress, view amounts owed, change the payment method and finally pay tuition fees. It is interesting to make a payment in case of tests to see the next step;
+* After explanations have been paid by supervisors, the CFO can log into (cfo@mail.com - User.1234) and view all invoices created to date.
 
-Está agora apto a testar a nossa webapp. A nossa web app foi criada com o intuito de ser uma webapp minimalista (UI/UX trending), mas que implementasse maioria dos requisitos a que nos propusemos. A aplicação é intuitiva, e nos casos em que pode não ser tão clara foram ainda usadas tool-tips. A nossa WebApp tem 3 users genéricos (Admin, RH, e CFO), o natural processo de utlização da nossa Webapp é:
-* Login com Admin (admin@mail.com - User.1234 (esta password é a genérica para todos os utlizadores);
-* Criar disciplinas com Admin para que Explicadores se possam registar nas mesmas;
-* Login com os RH ( rh@mail.com - User.1234);
-* Gerar nova Token de registo para o novo explicador contratado se poder registar na webapp, caso contrário qualquer pessoa não contratada ou sem habilitações poderia realizar o registo;
-* Registar Explicador usando a Token de Registo Gerada;
-* Login com o Explicador e criação de conteúdos de disciplina, link, e disponibilidades;
-* Registo de novo encarregado e posteriormente do seu educando;
-* Login com o educando, inscrição em disciplina, consumo de conteúdos das disciplinas e criação de feedbacks;
-* O Explicador pode agora visualizar os feedbacks criados, e com os RH pode visualizar os seus explicadores, visualizar feedbacks, visualizar avaliações de explicadores ou criar novas avaliações, e no pior dos casos eliminar explicadores com prestações pobres (despedimento);
-* Ao fazer Login com o Encarregado de educação pode visualizar os dados dos seus educandos e os seus progressos, visualizar valores em dívida, mudar o método de pagamento e por último pode pagar propinas. É interessante realizar um pagamento em caso de testes para visualizar o passo seguinte;
-* Após haverem pagamentos de explicações realizados por parte de encarregados, o CFO pode realizar o Login (cfo@mail.com - User.1234) e visualizar todas as faturas criadas até à data.
+<b>Note:</b> Since password hashes were created on another machine, they may not work when they are validated on your computer. If that is the case, in principle, just create a new record, and bcrypt should automatically be able to decrypt the remaining passwords, as the hash and salt will be the same.
 
-<b>Nota:</b> Sendo que as password hashes foram criadas noutra máquina, podem não funcionar quando forem validadas no seu computador. Se for esse o caso, em princípo basta criar um novo registo, e o bcrypt automaticamente deve conseguir desencriptar as restantes passwords, pois o hash e salt serão os mesmos.
-
-Posto isto, para inicializar a aplicação deve:
-* Ligar o SQL Server;
-* No terminal da sua aplicação, dentro da diretoria Explica-Online, arranque com a API:
+That said, to initialize the application you must:
+* Turn on the SQL Server;
+* At command line of your application, within the Explica-Online directory, start with the API:
    ```sh
    npm run start:server 
    ```
-* Deverá ser avisado do sucesso da inicialização;
-* A Rest API está agora disponível em http://localhost:3000/, caso a queira testar via Postman;
-* Abra um novo terminal;
-* CD para a diretoria Explica-Online, inicialize agora o Development Server do Angular:
+* You should be notified of the success of the initialization;
+* The Rest API is now available at http://localhost:3000/, if you want to test it via Postman;
+* Open a new terminal;
+* CD to the Explica-Online directory, start Angular's Development Server now:
    ```sh
    ng serve 
    ```
-* Finalmente pode aceder a webapp em: http://localhost:4200/;
+* You can finally access the Web App at: http://localhost:4200/;
 
-## Contacto
+## Contact
 
-Posto isto, as instruções de inicialização da nossa webapp estão terminadas. Caso encontre alguma dificuldade por favor contactar via: henriquesantos293@gmail.com
+If you encounter any difficulties, please contact via: henriquesantos293@gmail.com
